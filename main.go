@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 
 	"github.com/aws/aws-lambda-go/events"
@@ -27,5 +28,6 @@ func Handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 }
 
 func main() {
+	fmt.Println("test")
 	lambda.Start(Handler)
 }
